@@ -86,7 +86,8 @@ elif page == "Exploration des données":
     st.title("Exploration des Données")
 
     # Chargement des données
-    df = pd.read_csv("train.csv")
+    df = pd.read_csv("streamlit_app/train.csv")
+
 
     st.subheader("Aperçu général")
     if st.checkbox("Afficher les premières lignes du dataset"):
@@ -291,7 +292,7 @@ elif page == "Modélisation":
     st.write("Ce graphique compare les valeurs prédites aux vraies valeurs (jeu de test) pour la régression linéaire.")
 
     try:
-        df_pred = pd.read_csv("pred_vs_true_linreg.csv")
+        df_pred = pd.read_csv("streamlit_app/pred_vs_true_linreg.csv")
         fig = px.scatter(df_pred, x="y_test", y="y_pred_lr", opacity=0.5,
                          labels={"y_test": "Valeurs Réelles", "y_pred_linreg": "Prédictions"},
                          title="Régression Linéaire : Valeurs Réelles vs Prédictions")
@@ -307,12 +308,16 @@ elif page == "Prédictions":
 
     # 1. Choix du modèle
     st.markdown("## 1. Sélectionner le modèle")
-    model_files = {
-        "Régression Linéaire": "pipeline_linear_regression.pkl",
-        "Random Forest": "pipeline_random_forest.pkl",
-        "Gradient Boosting": "pipeline_gradient_boosting.pkl",
-        "KNN": "pipeline_knn.pkl"
-    }
+model_files = {
+    "Régression Linéaire": "streamlit_app/pipeline_linear_regression.pkl",
+    "Random Forest": "streamlit_app/pipeline_random_forest.pkl",
+    "Gradient Boosting": "streamlit_app/pipeline_gradient_boosting.pkl",
+    "KNN": "streamlit_app/pipeline_knn.pkl"
+}
+model_choice = st.selectbox("Choisissez un modèle", list(model_files.keys()))
+model_path = model_files[model_choice]
+model = joblib.load(model_path)
+
     model_choice = st.selectbox("Choisissez un modèle", list(model_files.keys()))
     model_path = model_files[model_choice]
     model = joblib.load(model_path)
