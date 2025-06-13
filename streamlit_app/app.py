@@ -308,16 +308,12 @@ elif page == "Prédictions":
 
     # 1. Choix du modèle
     st.markdown("## 1. Sélectionner le modèle")
-model_files = {
+    model_files = {
     "Régression Linéaire": "streamlit_app/pipeline_linear_regression.pkl",
     "Random Forest": "streamlit_app/pipeline_random_forest.pkl",
     "Gradient Boosting": "streamlit_app/pipeline_gradient_boosting.pkl",
     "KNN": "streamlit_app/pipeline_knn.pkl"
-}
-model_choice = st.selectbox("Choisissez un modèle", list(model_files.keys()))
-model_path = model_files[model_choice]
-model = joblib.load(model_path)
-
+    }
     model_choice = st.selectbox("Choisissez un modèle", list(model_files.keys()))
     model_path = model_files[model_choice]
     model = joblib.load(model_path)
@@ -439,4 +435,4 @@ model = joblib.load(model_path)
             )
 
         except Exception as e:
-            st.error(f"Une erreur est survenue lors de la lecture du fichier : {e}")            
+            st.error(f"Une erreur est survenue lors de la lecture du fichier : {e}")
