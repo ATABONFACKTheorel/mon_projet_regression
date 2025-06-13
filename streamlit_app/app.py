@@ -22,10 +22,18 @@ page = st.sidebar.selectbox(
     ("Accueil", "Exploration des données", "Prétraitement", "Modélisation", "Prédictions")
 )
 
-# Chemins vers les images (depuis le dossier principal)
-img_dir = "images"
+
+# Ancien chemin (qui cause l'erreur sur Streamlit Cloud si 'images' est dans 'streamlit_app')
+# img_dir = "images"
+
+# Nouveau chemin : Ajoutez le préfixe 'streamlit_app/'
+img_dir = "streamlit_app/images"
+
 image1_path = os.path.join(img_dir, "black_friday_sale.jpg")
 image2_path = os.path.join(img_dir, "customer_analysis.jpg")
+
+# Et ainsi de suite pour toutes les images que vous chargez...
+
 
 # PAGE D'ACCUEIL
 if page == "Accueil":
