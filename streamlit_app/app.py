@@ -10,7 +10,8 @@ import io
 import seaborn as sns
 
 # Chargement des données nettoyées
-df = pd.read_csv("black_friday_cleaned.csv")
+df = pd.read_csv("streamlit_app/black_friday_cleaned.csv")
+
 
 # Configuration globale de la page
 st.set_page_config(page_title="Black Friday Modeling", layout="wide")
