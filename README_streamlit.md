@@ -38,3 +38,9 @@ source venv/bin/activate  # Sur Windows : .\venv\Scripts\activate
 3.Installer les dépendances :pip install -r requirements.txt
 
 4.Lancer l'application Streamlit :streamlit run app.pyL'application s'ouvrira automatiquement dans votre navigateur web par défaut.DépendancesLes principales bibliothèques Python utilisées dans ce projet sont listées dans le fichier requirements.txt.Auteur[Votre Nom/Pseudo GitHub]
+
+## Application Déployée
+
+Découvrez l'application interactive Streamlit de ce projet, qui permet de [ visualiser les prédictions, tester le modèle avec de nouvelles données].
+
+**Accéder à l'application ici :** [Lien vers l'application Streamlit](https://monprojetregression-meghkousv9ahe5qsbeipgt.streamlit.app/)

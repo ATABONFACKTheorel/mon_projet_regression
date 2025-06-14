@@ -54,8 +54,8 @@ Le processus d'analyse et de modélisation a suivi les étapes clés suivantes :
 
 Comment Exécuter le Notebook
 Pour exécuter ce notebook, suivez les étapes ci-dessous :
-1.Cloner le dépôt GitHub :Copier git clone <URL_DU_DEPOT>
-cd <NOM_DU_DEPOT>
+1.Cloner le dépôt GitHub :Copier git clone <https://github.com/ATABONFACKTheorel/mon_projet_regression.git>
+cd <mon_projet_regression>
 2.Installer les dépendances :
 pip install -r requirements.txt
 
@@ -64,3 +64,9 @@ Le fichier train.csv doit être placé dans le même répertoire que le notebook
 
 4.Ouvrir et exécuter le notebook :
 Vous pouvez ouvrir le notebook avec Jupyter Notebook ou JupyterLab :jupyter notebook black_friday_regression_model.ipynb Ou avec Google Colab en l'important directement.Exécutez toutes les cellules du notebook séquentiellement pour reproduire l'analyse et les résultats.
+
+## Application Déployée
+
+Découvrez l'application interactive Streamlit de ce projet, qui permet de [ visualiser les prédictions, tester le modèle avec de nouvelles données].
+
+**Accéder à l'application ici :** [Lien vers l'application Streamlit](https://monprojetregression-meghkousv9ahe5qsbeipgt.streamlit.app/)
